@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body{
+    font-family: 'Raleway', sans-serif;
+}
+/*Navbar*/
+.logo{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    background-color: #1D476A;
+    padding: 5px;
+}
+.navbar-nav{
+    border-bottom: 10px;
+    border-color: rgb(178, 182, 186);
+}
+.navbar-nav a{
+    padding-left: 20px;
+}
+.link-red a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+.showGoUp{
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 80px;
+    z-index: 999;
+    cursor: pointer;
+}
+.icon-up{
+    color:#1D476A;
+    border: 2px white solid;
+    border-radius: 10px;
+}
+
+
+/*Section - Fondo */
+.fondo{
+    background-image: url('../img/duotone.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.fondo::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+.fondotxt{
+    margin-top: 110px;
+    height: 240px;
+}
+.fondotxt p{
+    font-size: 40px;
+}
+.descargar{
+    position: absolute;
+}
+/*Section - About Me*/
+.animado{
+    opacity: 0;
+    transition: all 0.5s
+}
+.showUp{
+    animation: showUp 1s;
+}
+@keyframes showUp{
+    0%{
+        transform: translateY(60px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.foto{
+    border: #1D476A solid 2px;
+
+}
+.abouttitle{
+    position: relative;
+
+}
+.abouttitle h4{
+    display: inline-block;
+    border: #1FC39A solid 3px;
+}
+.abouttitle::before{
+    content: '';
+    position: absolute;
+    border-top: 3px solid #1D476A;
+    top: 50%;
+    right: 0;
+    left: 0;
+}
+.info{
+    margin-left: 20px;
+}
+.textme p{
+    line-height: 30px;
+    
+}
+
+/*Section Skills*/
+.skills{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+.skills b{
+    font-size: 20px;
+    margin-top: 7px;
+}
+.skills img{
+    margin: auto;
+    width: 64px;
+    height: 64px;
+    transition: all 0.5s;
+
+}
+.skillgrid{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 10rem;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+}
+.btn{
+    background-color: #1FC39A;
+    color: white;
+}
+.btn:hover{
+    background-color: #1D476A;
+    color: white;
+}
+/*Section proyects*/
+.card-body{
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 20px 7px rgba(0,0,0,0.1);
+    position: relative;
+}
+.card-body h5{
+    padding: 10px;
+    font-weight: 700;
+}
+.card-body p{
+    margin-top: 20px;
+}
+.card-body a{
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    width: 75%;
+    margin: auto;
+}
+.card{
+    margin: auto;
+}
+/*contact-icons*/
+.contact-icons{
+    display: flex;
+    margin-top: 20px;
+}
+.contact-icons p{
+    margin-left: 20px;
+}
+/*footer*/
+.footer{
+    background-color: #1D476A;
+    color: white;
+}
+
+@media (max-width: 576px) { 
+    .fondotxt{
+        margin-bottom: 40px;
+    }
+    .fondotxt p{
+        font-size: 30px;
+    }
+}
